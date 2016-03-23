@@ -6,8 +6,12 @@ python:
 before_install:
   - sudo apt-get update
   - sudo apt-get install puppet
+
+install:
   - sudo puppet apply puppet/site.pp
   - sudo pip list show
 
+virtualenv:
+  system_site_packages: true
 
 script: python unittests/test_module.py
