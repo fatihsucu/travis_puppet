@@ -3,9 +3,11 @@ sudo: required
 python:
     - "2.7"
 
+before_install:
+  - sudo apt-get update -q
+  - sudo apt-get install puppet-master
+  - sudo apt-get install puppet
+  - sudo puppet apply puppet/site.pp
 
-before_script:
-    - sudo chmod +x dependencies.sh
-    - sudo ./dependencies.sh
 
 script: python unittests/test_module.py
