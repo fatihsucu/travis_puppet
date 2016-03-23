@@ -3,6 +3,7 @@ sudo: required
 python:
     - "2.7"
 
+before_script: sudo chmod +x dependencies.sh
 before_script: sudo ./dependencies.sh
 
 script: python unittests/test_module.py
