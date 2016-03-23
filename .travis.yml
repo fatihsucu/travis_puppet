@@ -9,7 +9,6 @@ before_install:
 
 install:
   - sudo puppet apply puppet/site.pp
-  - sudo pip list show
 
 virtualenv:
   system_site_packages: true

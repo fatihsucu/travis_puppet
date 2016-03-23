@@ -12,6 +12,7 @@ import module
 
 #Puppet should install pymongo package before tests
 import pymongo
+import arrow
 
 
 class TestModule(unittest.TestCase):
